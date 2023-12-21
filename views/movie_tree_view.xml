@@ -1,0 +1,48 @@
+<odoo>
+    <data>
+
+         <record id="movie_management_action" model="ir.actions.act_window">
+            <field name="name">Filmes</field>
+            <field name="res_model">movie.management</field>
+            <field name="view_mode">tree,form</field>
+           
+        </record>
+    
+         
+         <record id="movie_management_form_view" model="ir.ui.view">
+            <field name="name">movie.management.form</field>
+            <field name="model">movie.management</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="release_date"/>
+                        <field name="age"/>
+                        <field name="genre"/>
+                        <field name="director"/>
+                        <field name="actors"/>
+                    </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    
+
+        <record id="movie_management_tree_view" model="ir.ui.view">
+            <field name="name">movie.management.tree</field>
+            <field name="model">movie.management</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="release_date"/>
+                    <field name="age"/>
+                    <field name="genre"/>
+                    <field name="director"/>
+                    <field name="actors"/>
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</odoo>
